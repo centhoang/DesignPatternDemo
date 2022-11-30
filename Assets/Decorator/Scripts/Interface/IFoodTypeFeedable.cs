@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//public interface IFoodTypeFeedable
-//{
-//    void FeedByFoodType(FoodType foodType);
-//}
+public interface IFoodTypeFeed
+{
+    void FeedByFoodType(IEater eater);
+}

@@ -5,5 +5,5 @@ using UnityEngine.UI;
 
 public interface IEater
 {
-    void Eat(/*FoodType foodType*/);
+    void Eat(FoodType foodType);
 }

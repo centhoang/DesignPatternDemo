@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//public class ConcreteFeedFood : IFoodTypeFeedable
-//{
-//    public void FeedByFoodType(FoodType foodType)
-//    {
-//        throw new System.NotImplementedException();
-//    }
-//}
+public class ConcreteFeedFood : IFoodTypeFeed
+{
+    public virtual void FeedByFoodType(IEater eater)
+    {
+        eater.Eat(FoodType.Default);
+    }
+}

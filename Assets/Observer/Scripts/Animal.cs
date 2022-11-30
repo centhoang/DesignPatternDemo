@@ -6,18 +6,18 @@ using UnityEngine.UI;
 using TMPro;
 
 
-//public enum FoodType
-//{
-//    Default,
-//    Bone,
-//    Fish,
-//    Carrot,
-//    Meat
-//}
+public enum FoodType
+{
+    Default,
+    Bone,
+    Fish,
+    Carrot,
+    Meat
+}
 
 public class Animal : MonoBehaviour, IEater
 {
-    //[SerializeField] private List<FoodType> foodTypeEating;
+    [SerializeField] private List<FoodType> foodTypeEating;
 
     [SerializeField] private BehaveWithFeederComponent behaveWithA;
     [SerializeField] private BehaveWithFeederComponent behaveWithB;
@@ -32,13 +32,13 @@ public class Animal : MonoBehaviour, IEater
         eatAmountTxt.text = 0.ToString();
     }
 
-    public void Eat(/*FoodType foodType*/)
+    public void Eat(FoodType foodType)
     {
-        //if (foodTypeEating.Contains(foodType))
-        //{
+        if (foodTypeEating.Contains(foodType))
+        {
             eatAmount++;
             eatAmountTxt.text = eatAmount.ToString();
-        //}
+        }
     }
 }
 
